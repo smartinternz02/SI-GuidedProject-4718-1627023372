@@ -20,20 +20,20 @@ app = Flask(__name__)
 
 animalFound =""
 
+
+#Loading our saved model 
 model = load_model("smartbridge.h5")
 Animal_List = ["Butterfly","Cat","Chicken","Cow","Dog","Elephant","Horse","Sheep","Spider","Squirrel"]
-"""
-here we would initilize/load our model 
 
 
-"""
 #configuring the inputs and detection
 ##load the input video
 ### initializing our video stream
-
+##generate fucntion to generate frames from video and test it against our deep learning model
 
 def gen():
     print("[INFO] accessing video stream...")
+    #eiether add your saved video file or just can give direct surviellance camera access
     cap = cv2.VideoCapture(r"E:\SmartInternz\Project\Crop_Protection_from_Animals\test\ele_dog.mp4")
     size=4
     while True:
